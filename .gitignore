@@ -1,6 +1,7 @@
 **/*.bak
 **/*.orig
 **/*.log
+**/*.db
 
 secrets.yaml
 phue.conf

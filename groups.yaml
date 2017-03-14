@@ -1,0 +1,11 @@
+kitchen:
+  name: Küche
+  entities:
+  - light.hue_color_lamp_2
+
+cinema:
+  name: Kino
+  entities:
+  - light.hue_color_lamp_1
+  - light.hue_color_lamp_3
+  - light.hue_lightstrip_plus_1
