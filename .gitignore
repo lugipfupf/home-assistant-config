@@ -1,0 +1,6 @@
+**/*.bak
+**/*.orig
+**/*.log
+
+secrets.yaml
+phue.conf
