@@ -10,7 +10,7 @@ lights_cinema:
   entities:
   - group.lights_paperlamp
   - light.bar
-  - light.screen
+  - light.leinwand
 
 lights_bedroom:
   name: Schlafzimmer
