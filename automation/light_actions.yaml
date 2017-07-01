@@ -1,0 +1,28 @@
+automation:
+  - alias: "Media player paused/stopped"
+    trigger:
+    - platform: state
+      entity_id: media_player.cinebar
+      from: 'playing'
+      to: 'idle'
+    condition:
+    - condition: state
+      entity_id: light.leinwand
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.movie_menu
+
+  - alias: "Media player playing"
+    trigger:
+    - platform: state
+      entity_id: media_player.cinebar
+      to: 'playing'
+      from: 'idle'
+    condition:
+    - condition: state
+      entity_id: light.leinwand
+      state: 'on'
+    action:
+      service: scene.turn_on
+      entity_id: scene.movie_playing

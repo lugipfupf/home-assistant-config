@@ -1,11 +1,24 @@
-kitchen:
-  name: Küche
+room-lights:
+  view: yes
+  name: Licht
   entities:
-  - light.hue_color_lamp_2
+  - group.lights_cinema
+  - group.lights_bedroom
 
-cinema:
+lights_cinema:
   name: Kino
   entities:
-  - light.hue_color_lamp_1
-  - light.hue_color_lamp_3
-  - light.hue_lightstrip_plus_1
+  - group.lights_paperlamp
+  - light.bar
+  - light.screen
+
+lights_bedroom:
+  name: Schlafzimmer
+  entities:
+  - light.schlafzimmer_spot
+
+lights_paperlamp:
+  name: Papierlampe
+  entities:
+  - light.papierlampe_oben
+  - light.papierlampe_unten

@@ -23,6 +23,7 @@ updater:
   reporting: no
 
 discovery:
+  ignore: google_cast
 
 light:
   platform: hue
@@ -39,3 +40,5 @@ media_player:
     name: Cinebar
 
 group: !include groups.yaml
+scene: !include scenes.yaml
+automation: !include_dir_merge_list automation
