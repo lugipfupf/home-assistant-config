@@ -1,0 +1,20 @@
+  mediacontrol_movies:
+    name: Movie
+    initial: off
+    icon: mdi:movie
+  mediacontrol_switch:
+    name: Nintendo Switch
+    initial: off
+    icon: mdi:nintendo-switch
+  mediacontrol_cast:
+    name: Chrome Cast
+    initial: off
+    icon: mdi:cast
+  mediacontrol_ps3:
+    name: Playstation 3
+    initial: off
+    icon: mdi:playstation
+  mediacontrol_nesmini:
+    name: NESmini
+    initial: off
+    icon: mdi:gamepad-variant

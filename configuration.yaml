@@ -41,4 +41,7 @@ media_player:
 
 group: !include groups.yaml
 scene: !include scenes.yaml
+
+input_boolean: !include input-booleans.yaml
 automation: !include_dir_merge_list automation
+
