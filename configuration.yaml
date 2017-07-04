@@ -38,6 +38,31 @@ media_player:
   - platform: kodi
     host: !secret kodi_host
     name: Cinebar
+  - platform: yamaha
+    name: Receiver
+    source_ignore:
+      - V-AUX
+      - Napster
+      - NET RADIO
+      - AV1
+      - AV2
+      - AV3
+      - AV4
+      - AV5
+      - AV6
+      - UAW
+      - iPod
+      - iPod (USB)
+      - AUDIO1
+      - AUDIO2
+      - Bluetooth
+      - USB
+    source_names:
+      HDMI1: Movies
+      HDMI2: Nintendo Switch
+      HDMI3: Playstation 3
+      HDMI4: Chrome Cast
+      HDMI5: Spare
 
 group: !include groups.yaml
 scene: !include scenes.yaml
