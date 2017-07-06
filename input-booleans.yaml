@@ -18,3 +18,7 @@
     name: NESmini
     initial: off
     icon: mdi:gamepad-variant
+  mediacontrol_receiver:
+    name: Receiver
+    initial: on
+    icon: mdi:amplifier

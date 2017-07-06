@@ -58,7 +58,7 @@ media_player:
       - Bluetooth
       - USB
     source_names:
-      HDMI1: Movies
+      HDMI1: Cinebar
       HDMI2: Nintendo Switch
       HDMI3: Playstation 3
       HDMI4: Chrome Cast
@@ -66,6 +66,8 @@ media_player:
 
 group: !include groups.yaml
 scene: !include scenes.yaml
+switch: !include switches.yaml
+sensor: !include sensors.yaml
 
 input_boolean: !include input-booleans.yaml
 automation: !include_dir_merge_list automation
