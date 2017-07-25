@@ -3,12 +3,14 @@
   command: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
   value_template: '{{ value_json.data.watt[3] }}'
   unit_of_measurement: 'W'
+  scan_interval: 3
 
 - platform: command_line
   name: 'Strom Game'
   command: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
   value_template: '{{ value_json.data.watt[2] }}'
   unit_of_measurement: 'W'
+  scan_interval: 3
 
 - platform: command_line
   name: 'Strom ChromeCast'
@@ -22,9 +24,11 @@
   command: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
   value_template: '{{ value_json.data.watt[5] }}'
   unit_of_measurement: 'W'
+  scan_interval: 3
 
 - platform: command_line
   name: 'Strom Beamer'
   command: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
   value_template: '{{ value_json.data.watt[0] }}'
   unit_of_measurement: 'W'
+  scan_interval: 3
