@@ -3,7 +3,7 @@
     initial: off
     icon: mdi:movie
   mediacontrol_switch:
-    name: Nintendo Switch
+    name: Switch
     initial: off
     icon: mdi:nintendo-switch
   mediacontrol_cast:
@@ -18,7 +18,7 @@
     name: NESmini
     initial: off
     icon: mdi:gamepad-variant
-  mediacontrol_receiver:
-    name: Receiver
-    initial: on
-    icon: mdi:amplifier
+  powercontrol_switch:
+    name: Switch Laden
+    initial: off
+    icon: mdi:nintendo-switch

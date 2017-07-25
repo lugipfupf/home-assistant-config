@@ -33,3 +33,12 @@
     service: switch.turn_on
     data:
       entity_id: switch.powerstate_beamer
+
+- alias: 'Switch Strom einschalten'
+  trigger:
+    platform: template
+    value_template: '{{ is_state("input_boolean.mediacontrol_switch", "on") or is_state("input_boolean.powercontrol_switch", "on") }}'
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.powerstate_game
