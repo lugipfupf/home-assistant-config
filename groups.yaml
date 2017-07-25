@@ -1,3 +1,13 @@
+mediacenter:
+  name: Media Center
+  control: hidden
+  entities:
+  - input_boolean.mediacontrol_movies
+  - input_boolean.mediacontrol_switch
+  - input_boolean.mediacontrol_cast
+  - input_boolean.mediacontrol_ps3
+  - input_boolean.mediacontrol_nesmini
+
 room-lights:
   view: yes
   name: Licht
