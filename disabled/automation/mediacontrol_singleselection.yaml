@@ -1,0 +1,25 @@
+- alias 'Alle Controls ausser Movies ausschalten'
+  trigger:
+    platform: state
+    entity_id: input_boolean.mediacontrol_movies
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id:
+    - input_boolean.mediacontrol_switch
+    - input_boolean.mediacontrol_cast
+    - input_boolean.mediacontrol_ps3
+    - input_boolean.mediacontrol_nesmini
+
+- alias 'Alle Controls ausser Switch ausschalten'
+  trigger: 
+    platform: state
+    entity_id: input_boolean.mediacontrol_switch
+    to: 'on'
+  action:
+    service: input_boolean.turn_off
+    entity_id:
+    - input_boolean.mediacontrol_movies
+    - input_boolean.mediacontrol_cast
+    - input_boolean.mediacontrol_ps3
+    - input_boolean.mediacontrol_nesmini

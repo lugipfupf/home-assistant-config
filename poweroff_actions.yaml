@@ -1,8 +1,0 @@
-- alias: 'Receiver ausschalten'
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") or is_state("input_boolean.mediacontrol_switch", "on") }}'
-  action:
-    service: switch.turn_off
-    data:
-      entity_id: switch.powerstate_receiver

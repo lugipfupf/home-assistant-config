@@ -1,7 +1,7 @@
 - alias: 'Receiver Strom einschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") or is_state("input_boolean.mediacontrol_switch", "on") }}'
+    value_template: '{{ float(states.sensor.strom_receiver.state) < 1 and (is_state("input_boolean.mediacontrol_movies", "on") or is_state("input_boolean.mediacontrol_cast", "on") or is_state("input_boolean.mediacontrol_ps3", "on") or is_state("input_boolean.mediacontrol_switch", "on")) }}'
   action:
     service: switch.turn_on
     data:
@@ -10,7 +10,7 @@
 - alias: 'Receiver einschalten'
   trigger:
     platform: template
-    value_template: '{{ (float(states.sensor.strom_receiver.state) > 10 and float(states.sensor.strom_receiver.state) < 20) and (is_state("input_boolean.mediacontrol_movies", "on")) }}'
+    value_template: '{{ float(states.sensor.strom_receiver.state) > 10 and float(states.sensor.strom_receiver.state) < 30 and (is_state("input_boolean.mediacontrol_movies", "on") or is_state("input_boolean.mediacontrol_cast", "on") or is_state("input_boolean.mediacontrol_ps3", "on") or is_state("input_boolean.mediacontrol_switch", "on")) }}'
   action:
     service: media_player.turn_on
     data:
@@ -28,16 +28,16 @@
 - alias: 'Beamer Strom einschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") }}'
+    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") or is_state("input_boolean.mediacontrol_cast", "on") or is_state("input_boolean.mediacontrol_ps3", "on") or is_state("input_boolean.mediacontrol_switch", "on") }}'
   action:
     service: switch.turn_on
     data:
       entity_id: switch.powerstate_beamer
 
-- alias: 'Switch Strom einschalten'
+- alias: 'Game Strom einschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_switch", "on") or is_state("input_boolean.powercontrol_switch", "on") }}'
+    value_template: '{{ is_state("input_boolean.mediacontrol_switch", "on") or is_state("input_boolean.powercontrol_switch", "on") or is_state("input_boolean.mediacontrol_ps3", "on") }}'
   action:
     service: switch.turn_on
     data:
