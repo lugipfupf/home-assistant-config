@@ -13,3 +13,12 @@
   action:
     service: scene.turn_on
     entity_id: scene.movie_playing
+
+- alias: "Coloful gaming lights"
+  trigger:
+    platform: template
+    value_template: '{{ is_state("input_boolean.mediacontrol_switch", "on") or is_state("input_boolean_nesmini", "on") or is_state("input_boolean.ps3", "on") }}'
+  action:
+    service: scene.turn_on
+    entity_id: scene.colorful_gaming
+
