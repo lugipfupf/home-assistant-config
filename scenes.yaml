@@ -59,3 +59,50 @@
       xy_color: [0.1992, 0.1622]
       brightness: 120
       transition: 2
+
+
+- name: Reading
+  entities:
+    light.papierlampe_oben:
+      state: on
+      brightness: 254
+      xy_color: [0.4452,0.4068]
+      transition: 2
+    light.papierlampe_unten:
+      state: on
+      brightness: 254
+      xy_color: [0.4452,0.4068]
+      transition: 2
+    light.bar:
+      state: on
+      xy_color: [0.183,0.3374]
+      brightness: 200
+      transition: 2
+    light.leinwand:
+      state: on
+      xy_color: [0.4452, 0.4068]
+      brightness: 254
+      transition: 2
+
+- name: Relax
+  entities:
+    light.papierlampe_oben:
+      state: on
+      brightness: 1444
+      xy_color: [0.5014,0.4153]
+      transition: 2
+    light.papierlampe_unten:
+      state: on
+      brightness: 144
+      xy_color: [0.5014,0.4153]
+      transition: 2
+    light.bar:
+      state: on
+      xy_color: [0.183,0.3374]
+      brightness: 200
+      transition: 2
+    light.leinwand:
+      state: on
+      xy_color: [0.6873, 0.3062]
+      brightness: 175
+      transition: 2
