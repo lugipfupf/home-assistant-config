@@ -1,4 +1,13 @@
-mediacenter:
+default_view:
+  name: Hauptschalter
+  view: yes
+  icon: mdi:home-assistant
+  entities:
+  - group.media_center
+  - group.lights_scenes
+  - group.lights_rooms
+
+media_center:
   name: Media Center
   control: hidden
   entities:
@@ -8,12 +17,19 @@ mediacenter:
   - input_boolean.mediacontrol_ps3
   - input_boolean.mediacontrol_nesmini
 
-room-lights:
-  view: yes
+lights_rooms:
   name: Licht
   entities:
   - group.lights_cinema
   - group.lights_bedroom
+
+lights_scenes:
+  name: Licht Szenen
+  entities:
+  - scene.reading
+  - scene.relax
+  - scene.movie_menu
+  - scene.colorful_gaming
 
 lights_cinema:
   name: Kino
