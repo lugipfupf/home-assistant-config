@@ -6,6 +6,7 @@ homeassistant:
   elevation: !secret elevation
   unit_system: metric
   time_zone: !secret time_zone
+  customize: !include customize.yaml
 
 #introduction:
 

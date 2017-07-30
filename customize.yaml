@@ -1,0 +1,19 @@
+scene.reading:
+  icon: mdi:brightness-7
+  friendly_name: Standard
+scene.relax:
+  icon: mdi:brightness-6
+  friendly_name: Gemütlich
+scene.movie_menu:
+  icon: mdi:movie
+  friendliy_name: Filme gucken
+scene.colorful_gaming:
+  icon: mdi:gamepad-variant
+  friendly_name: Zocken
+
+group.lights_bedroom:
+  icon: mdi:lamp
+  friendly_name: Schlafzimmer Lugi
+group.lights_cinema:
+  icon: mdi:lamp
+  friendly_name: Kino
