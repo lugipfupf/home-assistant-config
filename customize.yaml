@@ -17,3 +17,19 @@ group.lights_bedroom:
 group.lights_cinema:
   icon: mdi:lamp
   friendly_name: Kino
+
+switch.powerstate_beamer:
+  icon: mdi:power
+  friendly_name: Beamer
+switch.powerstate_game:
+  icon: mdi:power
+  friendly_name: Game
+switch.powerstate_receiver:
+  icon: mdi:power
+  friendly_name: Receiver/Subwoofer
+switch.powerstate_chromecast:
+  icon: mdi:power
+  friendly_name: ChromeCast
+switch.powerstate_raspi:
+  icon: mdi:power
+  friendly_name: Rasperry Pi

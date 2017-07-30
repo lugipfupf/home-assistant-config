@@ -7,6 +7,19 @@ default_view:
   - group.lights_scenes
   - group.lights_rooms
 
+settings:
+  name: Settings
+  icon: mdi:settings
+  view: yes
+  entities:
+  - sensor.strom_receiver
+  - sensor.strom_game
+  - sensor.strom
+  - sensor.strom_chromecast
+  - sensor.strom_raspi
+  - sensor.strom_beamer
+  - group.powercontrol
+
 media_center:
   name: Media Center
   control: hidden
@@ -48,3 +61,12 @@ lights_paperlamp:
   entities:
   - light.papierlampe_oben
   - light.papierlampe_unten
+
+powercontrol:
+  name: Stromzufuhr
+  entities:
+  - switch.powerstate_receiver
+  - switch.powerstate_game
+  - switch.powerstate_chromecast
+  - switch.powerstate_raspi
+  - switch.powerstate_beamer
