@@ -19,6 +19,8 @@ settings:
   - sensor.strom_raspi
   - sensor.strom_beamer
   - group.powercontrol
+  - group.lights_all
+  - group.lights_paperlamp
 
 media_center:
   name: Media Center
@@ -61,6 +63,13 @@ lights_paperlamp:
   entities:
   - light.papierlampe_oben
   - light.papierlampe_unten
+
+lights_all:
+  name: Licht
+  entities:
+  - group.lights_paperlamp
+  - light.leinwand
+  - light.bar
 
 powercontrol:
   name: Stromzufuhr
