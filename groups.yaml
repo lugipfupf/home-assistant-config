@@ -37,6 +37,8 @@ lights_rooms:
   entities:
   - group.lights_cinema
   - group.lights_bedroom
+  - light.kuche
+  - light.gang
 
 lights_scenes:
   name: Licht Szenen
@@ -70,6 +72,8 @@ lights_all:
   - group.lights_paperlamp
   - light.leinwand
   - light.bar
+  - light.kuche
+  - light.gang
 
 powercontrol:
   name: Stromzufuhr
