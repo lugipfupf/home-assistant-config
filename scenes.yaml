@@ -88,12 +88,12 @@
   entities:
     light.papierlampe_oben:
       state: on
-      brightness: 1444
+      brightness: 89
       xy_color: [0.5014,0.4153]
       transition: 2
     light.papierlampe_unten:
       state: on
-      brightness: 144
+      brightness: 89
       xy_color: [0.5014,0.4153]
       transition: 2
     light.bar:
@@ -105,4 +105,43 @@
       state: on
       xy_color: [0.6873, 0.3062]
       brightness: 175
+      transition: 2
+
+- name: Cinema Concentrate
+  entities:
+    light.papierlampe_oben:
+      state: on
+      brightness: 254
+      xy_color: [0.3682,0.3715]
+      transition: 2
+    light.papierlampe_unten:
+      state: on
+      brightness: 254
+      xy_color: [0.3682,0.3715]
+      transition: 2
+    light.bar:
+      state: on
+      xy_color: [0.3682,0.3715]
+      brightness: 200
+      transition: 2
+    light.leinwand:
+      state: on
+      xy_color: [0.3682,0.3715]
+      brightness: 254
+      transition: 2
+
+- name: Kitchen Concentrate
+  entities:
+    light.kuche:
+      state: on
+      brightness: 254
+      xy_color: [0.3682,0.3715]
+      transition: 2
+
+- name: Kitchen Normal
+  entities:
+    light.kuche:
+      state: on
+      brightness: 254
+      xy_color: [0.4573,0.41]
       transition: 2

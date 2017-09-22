@@ -4,7 +4,8 @@ default_view:
   icon: mdi:home-assistant
   entities:
   - group.media_center
-  - group.lights_scenes
+  - group.lights_scenes_cinema
+  - group.lights_scenes_kitchen
   - group.lights_rooms
 
 settings:
@@ -40,13 +41,20 @@ lights_rooms:
   - light.kuche
   - light.gang
 
-lights_scenes:
-  name: Licht Szenen
+lights_scenes_cinema:
+  name: Licht Kino
   entities:
   - scene.reading
   - scene.relax
   - scene.movie_menu
   - scene.colorful_gaming
+  - scene.cinema_concentrate
+
+lights_scenes_kitchen:
+  name: Licht Küche
+  entities:
+  - scene.kitchen_normal
+  - scene.kitchen_concentrate
 
 lights_cinema:
   name: Kino

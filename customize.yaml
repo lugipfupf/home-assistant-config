@@ -10,6 +10,15 @@ scene.movie_menu:
 scene.colorful_gaming:
   icon: mdi:gamepad-variant
   friendly_name: Zocken
+scene.cinema_concentrate:
+  icon: mdi:book-open-page-variant
+  friendly_name: Konzentration
+scene.kitchen_concentrate:
+  icon: mdi:book-open-page-variant
+  friendly_name: Konzentration
+scene.kitchen_normal:
+  icon: mdi:brightness-7
+  friendly_name: Standard
 
 group.lights_bedroom:
   icon: mdi:lamp
@@ -17,6 +26,13 @@ group.lights_bedroom:
 group.lights_cinema:
   icon: mdi:lamp
   friendly_name: Kino
+
+light.kuche:
+  icon: mdi:lamp
+  friendly_name: Küche
+light.gang:
+  icon: mdi:lamp
+  friendly_name: Gang
 
 switch.powerstate_beamer:
   icon: mdi:power
