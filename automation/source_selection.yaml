@@ -1,12 +1,12 @@
-- alias: 'Receiver Eingang Cinebar.'
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") }}'
-  action:
-    service: media_player.select_source
-    data:
-      entity_id: media_player.receiver
-      source: "Cinebar"
+#- alias: 'Receiver Eingang Cinebar.'
+#  trigger:
+#    platform: template
+#    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") and (float(states.sensor.strom_receiver.state) > 10 and float(states.sensor.strom_receiver.state) < 30) }}'
+#  action:
+#    service: media_player.select_source
+#    data:
+#      entity_id: media_player.receiver
+#      source: "Cinebar"
 
 
 - alias: 'Receiver Eingang Game.'
