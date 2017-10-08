@@ -28,8 +28,7 @@ updater:
 
 discovery:
   ignore: 
-  - google_cast
-  - netgear
+    - google_cast
 
 light:
   platform: hue
