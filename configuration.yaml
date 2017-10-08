@@ -43,6 +43,11 @@ media_player:
   - platform: kodi
     host: !secret kodi_host
     name: Cinebar
+    turn_off_action:
+      service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: System.Shutdown
   - platform: yamaha
     name: Receiver
     source_ignore:
