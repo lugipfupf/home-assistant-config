@@ -10,7 +10,7 @@
 - alias: 'Cinebar Strom einschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") and float(states.sensor.strom_receiver.state) > 40 }}'
+    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "on") }}'
   action:
     service: switch.turn_on
     data:
