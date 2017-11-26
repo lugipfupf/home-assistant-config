@@ -2,6 +2,7 @@
 **/*.orig
 **/*.log
 **/*.db
+**/*.swp
 
 secrets.yaml
 phue.conf
