@@ -49,3 +49,13 @@ switch.powerstate_chromecast:
 switch.powerstate_raspi:
   icon: mdi:power
   friendly_name: Rasperry Pi
+
+sensor.aare_temperatur:
+  icon: mdi:oil-temperature
+  friendly_name: Temperatur
+sensor.aare_durchfluss:
+  icon: mdi:fast-forward
+  friendly_name: Durchfluss
+sensor.aare_hohe:
+  icon: mdi:chart-line
+  friendly_name: Höhe

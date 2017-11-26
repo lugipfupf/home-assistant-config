@@ -7,6 +7,7 @@ default_view:
   - group.lights_scenes_cinema
   - group.lights_scenes_kitchen
   - group.lights_rooms
+  - group.aare
 
 settings:
   name: Settings
@@ -22,6 +23,13 @@ settings:
   - group.powercontrol
   - group.lights_all
   - group.lights_paperlamp
+
+aare:
+  name: Aare
+  entities:
+  - sensor.aare_temperatur
+  - sensor.aare_durchfluss
+  - sensor.aare_hohe
 
 media_center:
   name: Media Center
