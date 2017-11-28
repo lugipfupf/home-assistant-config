@@ -19,6 +19,9 @@ scene.kitchen_concentrate:
 scene.kitchen_normal:
   icon: mdi:brightness-7
   friendly_name: Standard
+scene.good_morning:
+  icon: mdi:weather-night
+  friendly_name: Guten Morgen
 
 group.lights_bedroom:
   icon: mdi:lamp

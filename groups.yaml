@@ -57,6 +57,7 @@ lights_scenes_cinema:
   - scene.movie_menu
   - scene.colorful_gaming
   - scene.cinema_concentrate
+  - scene.good_morning
 
 lights_scenes_kitchen:
   name: Licht Küche
