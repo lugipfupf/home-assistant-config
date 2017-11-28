@@ -150,31 +150,31 @@
   entities:
     light.kuche:
       state: on
-      brightness: 87
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
     light.bar:
       state: on
-      brightness: 87
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
     light.papierlampe_oben:
       state: on
-      brightness: 87
+      brightness: 1207
       xy_color: [0.653,0.332]
       transition: 1
     light.papierlampe_unten:
       state: on
-      brightness: 87
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
     light.leinwand:
       state: on
-      brightness: 87
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
     light.gang:
       state: on
-      brightness: 87
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
