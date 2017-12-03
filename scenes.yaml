@@ -21,6 +21,11 @@
       xy_color: [0.1992, 0.1622]
       brightness: 240
       transition: 2
+    light.gang:
+      state: on
+      xy_color: [0.4573, 0.41]
+      brightness: 254
+      transition: 2
 
 - name: Movie playing
   entities:
@@ -35,6 +40,11 @@
       transition: 2
     light.leinwand:
       state: off
+      transition: 2
+    light.gang:
+      state: on
+      xy_color: [0.4573, 0.41]
+      brightness: 54
       transition: 2
 
 - name: Colorful Gaming
