@@ -21,7 +21,7 @@ config:
   # base_url: example.duckdns.org:8123
 
 logger:
-  default: error
+  default: debug
 
 updater:
   reporting: no
