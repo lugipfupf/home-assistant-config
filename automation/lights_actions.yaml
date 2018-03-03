@@ -9,7 +9,7 @@
 - alias: "Media player playing"
   trigger:
     platform: template
-    value_template: '{{ is_state("media_player.cinebar", "playing") }}'
+    value_template: '{{ is_state("media_player.cinebar", "playing") and is_state("input_boolean.mediacontrol_movies", "on") }}'
   action:
     service: scene.turn_on
     entity_id: scene.movie_playing
@@ -22,3 +22,38 @@
     service: scene.turn_on
     entity_id: scene.colorful_gaming
 
+- alias: "PushButton 1"
+  trigger:
+    platform: state
+    entity_id: sensor.hue_pushbutton_update
+  condition:
+    condition: state
+    entity_id: sensor.hue_pushbutton
+    state: '34'
+  action:
+    service: scene.turn_on
+    entity_id: scene.all_off
+
+- alias: "PushButton 4"
+  trigger:
+    platform: state
+    entity_id: sensor.hue_pushbutton_update
+  condition:
+    condition: state
+    entity_id: sensor.hue_pushbutton
+    state: '18'
+  action:
+    service: scene.turn_on
+    entity_id: scene.movie_menu
+
+- alias: "PushButton 2"
+  trigger:
+    platform: state
+    entity_id: sensor.hue_pushbutton_update
+  condition:
+    condition: state
+    entity_id: sensor.hue_pushbutton
+    state: '16'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.kitchen_hallway_normal

@@ -8,3 +8,6 @@ secrets.yaml
 phue.conf
 .HA_VERSION
 .uuid
+
+home-assistant_v2.*
+entity_registry.yaml

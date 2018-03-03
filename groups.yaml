@@ -92,6 +92,12 @@ lights_all:
   - light.kuche
   - light.gang
 
+lights_pushbutton_2:
+  name: 'Button 2'
+  entities:
+  - light.gang
+  - light.kuche
+
 powercontrol:
   name: Stromzufuhr
   entities:

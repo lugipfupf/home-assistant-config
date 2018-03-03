@@ -21,7 +21,7 @@ config:
   # base_url: example.duckdns.org:8123
 
 logger:
-  default: debug
+  default: error
 
 updater:
   reporting: no
@@ -33,11 +33,17 @@ discovery:
 light:
   platform: hue
 
+hue:
+  bridges:
+    - host: !secret huehost
+
 history:
 
 logbook:
 
 sun:
+
+#mqtt:
 
 media_player:
   - platform: kodi

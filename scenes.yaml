@@ -1,5 +1,5 @@
 # Scenes
-- name: Movie Menu
+- name: 'Movie Menu'
   entities:
     light.papierlampe_oben:
       state: on
@@ -27,7 +27,7 @@
       brightness: 254
       transition: 2
 
-- name: Movie playing
+- name: 'Movie playing'
   entities:
     light.papierlampe_oben:
       state: off
@@ -47,7 +47,7 @@
       brightness: 54
       transition: 2
 
-- name: Colorful Gaming
+- name: 'Colorful Gaming'
   entities:
     light.papierlampe_oben:
       state: on
@@ -117,7 +117,7 @@
       brightness: 175
       transition: 2
 
-- name: Cinema Concentrate
+- name: 'Cinema Concentrate'
   entities:
     light.papierlampe_oben:
       state: on
@@ -140,7 +140,22 @@
       brightness: 254
       transition: 2
 
-- name: Kitchen Concentrate
+- name: 'Cinema all off'
+  entities:
+    light.papierlampe_oben:
+      state: off
+      transition: 1
+    light.papierlampe_unten:
+      state: off
+      transition: 1
+    light.bar:
+      state: off
+      transition: 1
+    light.leinwand:
+      state: off
+      transition: 1
+
+- name: 'Kitchen Concentrate'
   entities:
     light.kuche:
       state: on
@@ -148,15 +163,37 @@
       xy_color: [0.3682,0.3715]
       transition: 2
 
-- name: Kitchen Normal
+- name: 'Kitchen Normal'
   entities:
     light.kuche:
       state: on
       brightness: 254
       xy_color: [0.4573,0.41]
-      transition: 2
+      transition: 1
 
-- name: Good morning
+- name: 'Kitchen Hallway Normal'
+  entities:
+    light.kuche:
+      state: on
+      brightness: 254
+      xy_color: [0.4573,0.41]
+      transition: 1
+    light.gang:
+      state: on
+      brightness: 254
+      xy_color: [0.4573,0.41]
+      transition: 1
+
+- name: 'Kitchen Hallway Off'
+  entities:
+    light.kuche:
+      state: off
+      transition: 1
+    light.gang:
+      state: off
+      transition: 1
+
+- name: 'Good morning'
   entities:
     light.kuche:
       state: on
@@ -187,4 +224,58 @@
       state: on
       brightness: 120
       rgb_color: [255,0,0]
+      transition: 1
+
+- name: 'All off'
+  entities:
+    light.kuche:
+      state: off
+      transition: 1
+    light.gang:
+      state: off
+      transition: 1
+    light.papierlampe_oben:
+      state: off
+      transition: 1
+    light.papierlampe_unten:
+      state: off
+      transition: 1
+    light.bar:
+      state: off
+      transition: 1
+    light.leinwand:
+      state: off
+      transition: 1
+
+- name: 'All on'
+  entities:
+    light.papierlampe_oben:
+      state: on
+      brightness: 144
+      xy_color: [0.5014,0.4153]
+      transition: 2
+    light.papierlampe_unten:
+      state: on
+      brightness: 144
+      xy_color: [0.5014,0.4153]
+      transition: 2
+    light.bar:
+      state: on
+      xy_color: [0.183,0.3374]
+      brightness: 240
+      transition: 2
+    light.leinwand:
+      state: on
+      xy_color: [0.1992, 0.1622]
+      brightness: 240
+      transition: 2
+    light.gang:
+      state: on
+      xy_color: [0.4573, 0.41]
+      brightness: 254
+      transition: 2
+    light.kuche:
+      state: on
+      brightness: 254
+      xy_color: [0.4573,0.41]
       transition: 1

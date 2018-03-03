@@ -30,3 +30,39 @@
       command_off: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:6,%22state%22:0%7D' &> /dev/null"
       command_state: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
       value_template: '{{ value_json.data.switch[5] == 1 }}'
+
+# Hue Switches
+- platform: template
+  switches:
+    kitchen_hallway:
+      value_template: "{{ is_state('sensor.hue_pushbutton', '16') }}"
+      turn_on:
+        service: scene.turn_on
+        data:
+          entity_id: scene.kitchen_hallway_normal
+      turn_off:
+        service: scene.turn_on
+        data:
+          entity_id: scene.kitchen_hallway_off
+          
+    movie_menu:
+      value_template: "{{ is_state('sensor.hue_pushbutton', '18') }}"
+      turn_on:
+        service: scene.turn_on
+        data:
+          entity_id: scene.movie_menu
+      turn_off:
+        service: scene.turn_on
+        data:
+          entity_id: scene.cinema_all_off
+
+    all_off:
+      value_template: "{{ is_state('sensor.hue_pushbutton', '34') }}"
+      turn_on:
+        service: scene.turn_on
+        data:
+          entity_id: scene.all_off
+      turn_off:
+        service: scene.turn_on
+        data:
+          entity_id: scene.all_off
