@@ -52,6 +52,9 @@ switch.powerstate_chromecast:
 switch.powerstate_raspi:
   icon: mdi:power
   friendly_name: Rasperry Pi
+switch.powerstate_phono:
+  icon: mdi:power
+  friendly_name: Plattenspieler
 
 sensor.aare_temperatur:
   icon: mdi:oil-temperature

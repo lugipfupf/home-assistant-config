@@ -1,3 +1,6 @@
+  control_receiver:
+    name: Receiver State
+    initial: off
   mediacontrol_movies:
     name: Movie
     initial: off
@@ -22,3 +25,7 @@
     name: Switch Laden
     initial: off
     icon: mdi:nintendo-switch
+  mediacontrol_phono:
+    name: Platten legen
+    initial: off
+    icon: mdi:album

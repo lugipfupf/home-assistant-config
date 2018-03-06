@@ -1,16 +1,7 @@
-- alias: 'Receiver Standby'
-  trigger:
-    platform: template
-    value_template: '{{ float(states.sensor.strom_receiver.state) > 50 and (is_state("input_boolean.mediacontrol_movies", "off") and is_state("input_boolean.mediacontrol_cast", "off") and is_state("input_boolean.mediacontrol_ps3", "off") and is_state("input_boolean.mediacontrol_switch", "off")) }}'
-  action:
-    service: media_player.turn_off
-    data:
-      entity_id: media_player.receiver
-
 - alias: 'Receiver Strom ausschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_movies", "off") and is_state("input_boolean.mediacontrol_cast", "off") and is_state("input_boolean.mediacontrol_ps3", "off") and is_state("input_boolean.mediacontrol_switch", "off") }}'
+    value_template: '{{ is_state("input_boolean.mediacontrol_phono", "off") and is_state("input_boolean.mediacontrol_movies", "off") and is_state("input_boolean.mediacontrol_cast", "off") and is_state("input_boolean.mediacontrol_ps3", "off") and is_state("input_boolean.mediacontrol_switch", "off") }}'
   action:
     service: switch.turn_off
     data:
@@ -42,3 +33,12 @@
     service: switch.turn_off
     data:
       entity_id: switch.powerstate_game
+
+- alias: 'Plattenspieler Strom ausschalten'
+  trigger:
+    platform: template
+    value_template: '{{ is_state("input_boolean.mediacontrol_phono", "off")}} '
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.powerstate_phono

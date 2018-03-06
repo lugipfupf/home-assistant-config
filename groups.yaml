@@ -16,7 +16,7 @@ settings:
   entities:
   - sensor.strom_receiver
   - sensor.strom_game
-  - sensor.strom
+  - sensor.strom_plattenspieler
   - sensor.strom_chromecast
   - sensor.strom_raspi
   - sensor.strom_beamer
@@ -39,7 +39,7 @@ media_center:
   - input_boolean.mediacontrol_switch
   - input_boolean.mediacontrol_cast
   - input_boolean.mediacontrol_ps3
-  - input_boolean.mediacontrol_nesmini
+  - input_boolean.mediacontrol_phono
 
 lights_rooms:
   name: Licht
@@ -102,6 +102,7 @@ powercontrol:
   name: Stromzufuhr
   entities:
   - switch.powerstate_receiver
+  - switch.powerstate_phono
   - switch.powerstate_game
   - switch.powerstate_chromecast
   - switch.powerstate_raspi

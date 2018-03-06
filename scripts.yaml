@@ -1,0 +1,31 @@
+  power_on_recevier:
+    sequence:
+      - service: switch.turn_on
+        data:
+          entity_id: switch.powerstate_receiver
+      - delay:
+          seconds: 2
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.control_receiver
+  
+  receiver_select_source_hdmi1:
+    sequence:
+      - service: media_player.turn_on
+        data:
+          entity_id: media_player.receiver
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.receiver
+          source: "HDMI1"
+  
+  receiver_select_source_phono:
+    sequence:
+      - service: media_player.turn_on
+        data:
+          entity_id: media_player.receiver
+      - delay:
+          seconds: 2
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.receiver
+          source: "PHONO"

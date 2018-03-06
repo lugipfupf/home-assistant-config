@@ -21,7 +21,9 @@ config:
   # base_url: example.duckdns.org:8123
 
 logger:
-  default: error
+  default: info
+  logs:
+    homeassistant.components.sensor: error
 
 updater:
   reporting: no
@@ -55,7 +57,11 @@ media_player:
         entity_id: media_player.kodi
         method: System.Shutdown
   - platform: yamaha
+    scan_interval: 30
+    host: !secret receiver_host
     name: Receiver
+    zone_ignore:
+      - "zone 2"
     source_ignore:
       - V-AUX
       - Napster
@@ -74,11 +80,12 @@ media_player:
       - Bluetooth
       - USB
     source_names:
-      HDMI1: Cinebar
-      HDMI2: Nintendo Switch
-      HDMI3: Playstation 3
-      HDMI4: Chrome Cast
-      HDMI5: Spare
+      HDMI1: "Cinebar"
+      HDMI2: "Nintendo Switch"
+      HDMI3: "Playstation 3"
+      HDMI4: "Chrome Cast"
+      HDMI5: "Spare"
+      PHONO: "Vinyl"
 
 group: !include groups.yaml
 scene: !include scenes.yaml
@@ -86,5 +93,6 @@ switch: !include switches.yaml
 sensor: !include sensors.yaml
 
 input_boolean: !include input-booleans.yaml
+script: !include scripts.yaml
 automation: !include_dir_merge_list automation
 
