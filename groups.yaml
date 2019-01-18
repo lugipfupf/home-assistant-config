@@ -24,6 +24,29 @@ settings:
   - group.lights_all
   - group.lights_paperlamp
 
+media_download:
+  name: Media Download
+  view: yes
+  icon: mdi:download
+  entities:
+  - group.sonarr
+  - group.nzbget
+
+sonarr:
+  name: Serien
+  icon: mdi:tv
+  entities:
+  - sensor.sonarr_upcoming
+  - sensor.sonarr_disk_space
+
+nzbget:
+  name: NZBget
+  icon: mdi:download
+  entities:
+  - sensor.nzbget_queue_size
+  - sensor.nzbget_size
+  - sensor.nzbget_speed
+
 aare:
   name: Aare
   entities:

@@ -40,6 +40,7 @@
   unit_of_measurement: 'W'
   scan_interval: 2
 
+# Aare
 - platform: rest
   name: 'Aare Temperatur'
   resource: http://aare.schwumm.ch/aare.json
@@ -75,3 +76,23 @@
   name: 'Hue PushButton'
   scan_interval: 1
   
+# Sonarr
+- platform: sonarr
+  api_key: !secret sonarr_apikey
+  host: !secret sonarr_host
+  port: !secret sonarr_port
+  monitored_conditions:
+    - upcoming
+    - diskspace
+  days: 2
+
+# nzbget
+- platform: nzbget
+  host: !secret nzbget_host
+  username: !secret nzbget_username
+  password: !secret nzbget_password
+  monitored_variables:
+    - download_size
+    - remaining_size
+    - download_rate
+
