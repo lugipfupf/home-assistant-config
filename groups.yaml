@@ -8,6 +8,12 @@ default_view:
   - group.lights_scenes_kitchen
   - group.lights_rooms
   - group.aare
+  - sensor.netatmo_chino_temperature
+  - sensor.netatmo_chino_co2
+  - sensor.netatmo_cheminee_temperature
+  - sensor.netatmo_cheminee_co2
+  - sensor.netatmo_schlafzimmer_temperature
+  - sensor.netatmo_schlafzimmer_co2
 
 settings:
   name: Settings
@@ -130,3 +136,10 @@ powercontrol:
   - switch.powerstate_chromecast
   - switch.powerstate_raspi
   - switch.powerstate_beamer
+
+air_quality:
+  name: 'Air Quality'
+  entities:
+  - sensor.netatmo_chino_co2
+  - sensor.netatmo_cheminee_co2
+  - sensor.netatmo_schlafzimmer_co2

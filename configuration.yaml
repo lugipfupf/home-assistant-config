@@ -87,6 +87,12 @@ media_player:
       HDMI5: "Spare"
       PHONO: "Vinyl"
 
+netatmo:
+  api_key: !secret netatmo_api-key
+  secret_key: !secret netatmo_secret-key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+
 group: !include groups.yaml
 scene: !include scenes.yaml
 switch: !include switches.yaml

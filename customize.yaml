@@ -65,3 +65,16 @@ sensor.aare_durchfluss:
 sensor.aare_hohe:
   icon: mdi:chart-line
   friendly_name: Höhe
+
+sensor.netatmo_chino_temperature:
+  friendly_name: Chino
+sensor.netatmo_chino_co2:
+  friendly_name: CO2
+sensor.netatmo_cheminee_temperature:
+  friendly_name: Cheminee
+sensor.netatmo_cheminee_co2:
+  friendly_name: CO2
+sensor.netatmo_schlafzimmer_temperature:
+  friendly_name: Schlafzimmer
+sensor.netatmo_schlafzimmer_co2:
+  friendly_name: CO2
