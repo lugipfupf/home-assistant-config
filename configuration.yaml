@@ -21,7 +21,7 @@ config:
   # base_url: example.duckdns.org:8123
 
 logger:
-  default: fatal
+  default: warn
   logs:
     homeassistant.components.sensor: error
 

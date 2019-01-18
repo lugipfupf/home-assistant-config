@@ -5,11 +5,6 @@
       command_off: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:1,%22state%22:0%7D' &> /dev/null"
       command_state: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
       value_template: '{{ value_json.data.switch[0] == 1 }}'
-    powerstate_phono:
-      command_on: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:2,%22state%22:1%7D' &> /dev/null"
-      command_off: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:2,%22state%22:0%7D' &> /dev/null"
-      command_state: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
-      value_template: '{{ value_json.data.switch[1] == 1 }}'
     powerstate_game:
       command_on: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:3,%22state%22:1%7D' &> /dev/null"
       command_off: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=200&json=%7B%22sn%22:%22SWP6023002000861%22,%22port%22:3,%22state%22:0%7D' &> /dev/null"

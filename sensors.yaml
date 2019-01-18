@@ -33,13 +33,6 @@
   unit_of_measurement: 'W'
   scan_interval: 2
 
-- platform: command_line
-  name: 'Strom Plattenspieler'
-  command: "curl -s -X GET 'http://home-socket.home.lugipfupf.ch/?cmd=511&json=%7B%22sn%22:%22SWP6023002000861%22%7D'"
-  value_template: '{{ value_json.data.watt[1] }}'
-  unit_of_measurement: 'W'
-  scan_interval: 2
-
 # Aare
 - platform: rest
   name: 'Aare Temperatur'

@@ -32,11 +32,11 @@
     data:
       entity_id: switch.powerstate_game
 
-- alias: 'Plattenspieler Strom einschalten'
+- alias: 'Chromecast Strom einschalten'
   trigger:
     platform: template
-    value_template: '{{ is_state("input_boolean.mediacontrol_phono", "on") }}'
+    value_template: '{{ is_state("input_boolean.mediacontrol_cast", "on") }}'
   action:
     service: switch.turn_on
     data:
-      entity_id: switch.powerstate_phono
+      entity_id: switch.powerstate_chromecast

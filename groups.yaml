@@ -22,7 +22,6 @@ settings:
   entities:
   - sensor.strom_receiver
   - sensor.strom_game
-  - sensor.strom_plattenspieler
   - sensor.strom_chromecast
   - sensor.strom_raspi
   - sensor.strom_beamer
@@ -66,9 +65,10 @@ media_center:
   entities:
   - input_boolean.mediacontrol_movies
   - input_boolean.mediacontrol_switch
+  - input_boolean.mediacontrol_ps4
+  - input_boolean.mediacontrol_steam
   - input_boolean.mediacontrol_cast
-  - input_boolean.mediacontrol_ps3
-  - input_boolean.mediacontrol_phono
+  - input_boolean.powercontrol_gaming
 
 lights_rooms:
   name: Licht
@@ -76,7 +76,6 @@ lights_rooms:
   - group.lights_cinema
   - group.lights_bedroom
   - light.kuche
-  - light.gang
 
 lights_scenes_cinema:
   name: Licht Kino
@@ -110,6 +109,7 @@ lights_paperlamp:
   name: Papierlampe
   entities:
   - light.papierlampe_oben
+  - light.papierlampe_mitte
   - light.papierlampe_unten
 
 lights_all:
@@ -119,7 +119,6 @@ lights_all:
   - light.leinwand
   - light.bar
   - light.kuche
-  - light.gang
 
 lights_pushbutton_2:
   name: 'Button 2'
@@ -131,7 +130,6 @@ powercontrol:
   name: Stromzufuhr
   entities:
   - switch.powerstate_receiver
-  - switch.powerstate_phono
   - switch.powerstate_game
   - switch.powerstate_chromecast
   - switch.powerstate_raspi
@@ -140,6 +138,6 @@ powercontrol:
 air_quality:
   name: 'Air Quality'
   entities:
-  - sensor.netatmo_chino_co2
   - sensor.netatmo_cheminee_co2
   - sensor.netatmo_schlafzimmer_co2
+  - sensor.netatmo_chino_co2

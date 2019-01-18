@@ -6,26 +6,21 @@
     initial: off
     icon: mdi:movie
   mediacontrol_switch:
-    name: Switch
+    name: Nintendo Switch
     initial: off
     icon: mdi:nintendo-switch
+  mediacontrol_ps4:
+    name: Playstation 4
+    initial: off
+    icon: mdi:playstation
+  mediacontrol_steam:
+    name: Steam Link
+    icon: mdi:steam
   mediacontrol_cast:
     name: Chrome Cast
     initial: off
     icon: mdi:cast
-  mediacontrol_ps3:
-    name: Playstation 3
+  powercontrol_gaming:
+    name: Controller laden
     initial: off
-    icon: mdi:playstation
-  mediacontrol_nesmini:
-    name: NESmini
-    initial: off
-    icon: mdi:gamepad-variant
-  powercontrol_switch:
-    name: Switch Laden
-    initial: off
-    icon: mdi:nintendo-switch
-  mediacontrol_phono:
-    name: Platten legen
-    initial: off
-    icon: mdi:album
+    icon: mdi:xbox-controller-battery-charging

@@ -6,6 +6,11 @@
       brightness: 144
       xy_color: [0.5014,0.4153]
       transition: 2
+    light.papierlampe_mitte:
+      state: on
+      brightness: 144
+      xy_color: [0.5014,0.4153]
+      transition: 2
     light.papierlampe_unten:
       state: on
       brightness: 144
@@ -21,15 +26,13 @@
       xy_color: [0.1992, 0.1622]
       brightness: 240
       transition: 2
-    light.gang:
-      state: on
-      xy_color: [0.4573, 0.41]
-      brightness: 254
-      transition: 2
 
 - name: 'Movie playing'
   entities:
     light.papierlampe_oben:
+      state: off
+      transition: 2
+    light.papierlampe_mitte:
       state: off
       transition: 2
     light.papierlampe_unten: 
@@ -41,28 +44,23 @@
     light.leinwand:
       state: off
       transition: 2
-    light.gang:
-      state: on
-      xy_color: [0.4573, 0.41]
-      brightness: 54
-      transition: 2
 
 - name: 'Colorful Gaming'
   entities:
     light.papierlampe_oben:
       state: on
-      brightness: 154
+      brightness: 120
       xy_color: [0.3681,0.4914]
       transition: 2
     light.papierlampe_unten:
       state: on
-      brightness: 154
+      brightness: 120
       xy_color: [0.3628,0.181]
       transition: 2
     light.bar:
       state: on
       xy_color: [0.183,0.3374]
-      brightness: 200
+      brightness: 154
       transition: 2
     light.leinwand:
       state: on
@@ -178,18 +176,10 @@
       brightness: 254
       xy_color: [0.4573,0.41]
       transition: 1
-    light.gang:
-      state: on
-      brightness: 254
-      xy_color: [0.4573,0.41]
-      transition: 1
 
 - name: 'Kitchen Hallway Off'
   entities:
     light.kuche:
-      state: off
-      transition: 1
-    light.gang:
       state: off
       transition: 1
 
@@ -207,8 +197,8 @@
       transition: 1
     light.papierlampe_oben:
       state: on
-      brightness: 1207
-      xy_color: [0.653,0.332]
+      brightness: 120
+      rgb_color: [255,0,0]
       transition: 1
     light.papierlampe_unten:
       state: on
@@ -220,7 +210,7 @@
       brightness: 120
       rgb_color: [255,0,0]
       transition: 1
-    light.gang:
+    light.papierlampe_mitte:
       state: on
       brightness: 120
       rgb_color: [255,0,0]
@@ -231,7 +221,7 @@
     light.kuche:
       state: off
       transition: 1
-    light.gang:
+    light.paperlampe_mitte:
       state: off
       transition: 1
     light.papierlampe_oben:
@@ -269,9 +259,9 @@
       xy_color: [0.1992, 0.1622]
       brightness: 240
       transition: 2
-    light.gang:
+    light.papierlampe_mitte:
       state: on
-      xy_color: [0.4573, 0.41]
+      xy_color: [0.5014, 0.4153]
       brightness: 254
       transition: 2
     light.kuche:

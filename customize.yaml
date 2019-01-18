@@ -70,10 +70,14 @@ sensor.netatmo_chino_temperature:
   friendly_name: Chino
 sensor.netatmo_chino_co2:
   friendly_name: CO2
+  templates:
+    rgb_color: "if (state > 200) return [251, 210, 41]; else return [54, 95, 140];"
 sensor.netatmo_cheminee_temperature:
   friendly_name: Cheminee
 sensor.netatmo_cheminee_co2:
   friendly_name: CO2
+  templates:
+    rgb_color: "if (state > 200) return [251, 210, 41]; else return [54, 95, 140];"
 sensor.netatmo_schlafzimmer_temperature:
   friendly_name: Schlafzimmer
 sensor.netatmo_schlafzimmer_co2:
