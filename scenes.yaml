@@ -81,6 +81,11 @@
       brightness: 254
       xy_color: [0.4452,0.4068]
       transition: 2
+    light.papierlampe_mitte:
+      state: on
+      brightness: 254
+      xy_color: [0.4452,0.4068]
+      transition: 2
     light.papierlampe_unten:
       state: on
       brightness: 254

@@ -1,0 +1,18 @@
+  pulselight_transition:
+    name: Pulselight Transition
+    initial: 10
+    max: 255
+    min: 0
+    step: 1
+
+  pulselight_delay:
+    name: Pulselight Delay
+    initial: 10
+    max: 255
+    min: 0
+
+  pulselight_brightness:
+    name: Pulselight Brightness
+    initial: 250
+    max: 255
+    min: 0

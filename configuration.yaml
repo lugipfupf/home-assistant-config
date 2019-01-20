@@ -40,9 +40,9 @@ hue:
   bridges:
     - host: !secret huehost
 
-# history:
+history:
 
-# logbook:
+logbook:
 
 sun:
 
@@ -110,5 +110,7 @@ switch: !include switches.yaml
 sensor: !include sensors.yaml
 
 input_boolean: !include input-booleans.yaml
+input_text: !include input-texts.yaml
+input_number: !include input-numbers.yaml
 script: !include scripts.yaml
 automation: !include_dir_merge_list automation

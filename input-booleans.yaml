@@ -24,3 +24,7 @@
     name: Controller laden
     initial: off
     icon: mdi:xbox-controller-battery-charging
+  pulselight_active:
+   name: Pulselight Active
+   initial: off
+   icon: mdi:blur-radial

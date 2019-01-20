@@ -1,0 +1,7 @@
+  pulselight_color:
+    name: Pulselight Color
+    initial: Red
+
+  pulselight_light_id:
+    name: Pulselight Light Id
+    initial: none

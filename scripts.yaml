@@ -29,3 +29,80 @@
         data:
           entity_id: media_player.receiver
           source: "PHONO"
+
+  pulselight_start:
+    alias: Pulselight Start
+    sequence:
+    
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.pulselight_active
+
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.pulselight_brightness
+        value: '{{ brightness }}'
+      
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.pulselight_color
+        value: '{{ color }}'
+      
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.pulselight_transition
+        value: '{{ transition }}'
+     
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.pulselight_delay
+        value: '{{ delay }}'
+      
+    - service: input_text.set_value
+      data_template:
+        entity_id: input_text.pulselight_light_id
+        value: '{{ light_id }}'
+    
+    - service: script.turn_on
+      data_template:
+        entity_id: script.pulselight_action
+
+  pulselight_action:
+    alias: Pulselight
+    sequence:
+    
+    - condition: state
+      entity_id: input_boolean.pulselight_active
+      state: 'on'
+  
+    - service: homeassistant.turn_on
+      data_template:      
+        brightness: '{{ states.input_number.pulselight_brightness.state | int }}'
+        color_name: '{{ states.input_text.pulselight_color.state }}'
+        transition: '{{ states.input_number.pulselight_transition.state | int }}'
+        entity_id: '{{ states.input_text.pulselight_light_id.state }}'
+      
+    
+    - delay: 00:00:{{ states('input_number.pulselight_delay') | int }}
+  
+    - service: homeassistant.turn_off
+      data_template:      
+        transition: '{{ states.input_number.pulselight_transition.state | int }}'
+        entity_id: '{{ states.input_text.pulselight_light_id.state }}'
+    - service: script.turn_on
+      data:
+        entity_id: script.pulselight_loop
+    
+# Looping the scripts
+  pulselight_loop:
+    alias: Pulse Loop
+    sequence:
+    
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.pulselight_active
+        
+    - delay: 00:00:{{ states('input_number.pulselight_delay') | int  }}
+    - service: script.turn_on
+      data_template:
+        entity_id: script.pulselight_action
