@@ -52,6 +52,11 @@
       brightness: 120
       xy_color: [0.3681,0.4914]
       transition: 2
+    light.papierlampe_mitte:
+      state: on
+      brightness: 120
+      xy_color: [0.157,0.098]
+      transition: 2
     light.papierlampe_unten:
       state: on
       brightness: 120
@@ -99,6 +104,11 @@
       brightness: 89
       xy_color: [0.5014,0.4153]
       transition: 2
+    light.papierlampe_mitte:
+      state: on
+      brightness: 89
+      xy_color: [0.5014,0.4153]
+      transition: 2
     light.papierlampe_unten:
       state: on
       brightness: 89
@@ -118,6 +128,11 @@
 - name: 'Cinema Concentrate'
   entities:
     light.papierlampe_oben:
+      state: on
+      brightness: 254
+      xy_color: [0.3682,0.3715]
+      transition: 2
+    light.papierlampe_mitte:
       state: on
       brightness: 254
       xy_color: [0.3682,0.3715]
@@ -143,6 +158,9 @@
     light.papierlampe_oben:
       state: off
       transition: 1
+    light.papierlampe_mitte:
+      state: off
+      transition: 1
     light.papierlampe_unten:
       state: off
       transition: 1
@@ -159,6 +177,14 @@
       state: on
       brightness: 254
       xy_color: [0.3682,0.3715]
+      transition: 2
+
+- name: 'Kitchen Comfy'
+  entities:
+    light.kuche:
+      state: on
+      brightness: 254
+      xy_color: [0.581,0.387]
       transition: 2
 
 - name: 'Kitchen Normal'
@@ -244,6 +270,11 @@
       brightness: 144
       xy_color: [0.5014,0.4153]
       transition: 2
+    light.papierlampe_mitte:
+      state: on
+      brightness: 144
+      xy_color: [0.5014,0.4153]
+      transition: 2
     light.papierlampe_unten:
       state: on
       brightness: 144
@@ -258,11 +289,6 @@
       state: on
       xy_color: [0.1992, 0.1622]
       brightness: 240
-      transition: 2
-    light.papierlampe_mitte:
-      state: on
-      xy_color: [0.5014, 0.4153]
-      brightness: 254
       transition: 2
     light.kuche:
       state: on
