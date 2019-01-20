@@ -23,7 +23,7 @@ config:
 logger:
   default: warn
   logs:
-    homeassistant.components.sensor: error
+    homeassistant.components.sensor: fatal
 
 updater:
   reporting: no
@@ -31,6 +31,7 @@ updater:
 discovery:
   ignore: 
     - google_cast
+    - netgear_router
 
 light:
   platform: hue
@@ -39,14 +40,24 @@ hue:
   bridges:
     - host: !secret huehost
 
-history:
+# history:
 
-logbook:
+# logbook:
 
 sun:
 
 #mqtt:
 
+#python_script:
+
+device_tracker:
+  - platform: nmap_tracker
+    home_interval: 10
+    hosts:
+      - !secret track_nine
+      - !secret track_lugi
+
+    
 media_player:
   - platform: kodi
     host: !secret kodi_host
@@ -101,4 +112,3 @@ sensor: !include sensors.yaml
 input_boolean: !include input-booleans.yaml
 script: !include scripts.yaml
 automation: !include_dir_merge_list automation
-

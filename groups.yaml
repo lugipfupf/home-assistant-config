@@ -14,6 +14,8 @@ default_view:
   - sensor.netatmo_cheminee_co2
   - sensor.netatmo_schlafzimmer_temperature
   - sensor.netatmo_schlafzimmer_co2
+  - device_tracker.handy_lugi
+  - device_tracker.handy_nine
 
 settings:
   name: Settings
@@ -91,6 +93,7 @@ lights_scenes_kitchen:
   name: Licht Küche
   entities:
   - scene.kitchen_normal
+  - scene.kitchen_comfy
   - scene.kitchen_concentrate
 
 lights_cinema:
