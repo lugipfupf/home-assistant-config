@@ -10,7 +10,7 @@
         delay: '05'
         light_id: light.papierlampe_unten
         transition: '5'
-- alias: "Air quality mediocre"
+- alias: "Air quality poor"
   trigger:
     platform: template
     value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1000 }}'
@@ -22,7 +22,7 @@
         delay: '05'
         light_id: light.papierlampe_unten
         transition: '5'
-- alias: "Air quality mediocre"
+- alias: "Air quality terrible"
   trigger:
     platform: template
     value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1400 }}'
