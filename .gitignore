@@ -13,5 +13,7 @@ phue.conf
 
 home-assistant_v2.*
 entity_registry.yaml
+known_devices.yaml
 .storage
 .migration_progress
+www/*.png
