@@ -30,6 +30,7 @@ settings:
   - group.powercontrol
   - group.lights_all
   - group.lights_paperlamp
+  - input_boolean.pulselight_active
 
 media_download:
   name: Media Download
@@ -87,7 +88,7 @@ lights_scenes_cinema:
   - scene.movie_menu
   - scene.colorful_gaming
   - scene.cinema_concentrate
-  - scene.good_morning
+  - scene.good_morning_cinema
 
 lights_scenes_kitchen:
   name: Licht Küche
@@ -95,6 +96,7 @@ lights_scenes_kitchen:
   - scene.kitchen_normal
   - scene.kitchen_comfy
   - scene.kitchen_concentrate
+  - scene.kitchen_good_morning
 
 lights_cinema:
   name: Kino

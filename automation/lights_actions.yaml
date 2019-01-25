@@ -57,3 +57,17 @@
   action:
     - service: scene.turn_on
       entity_id: scene.kitchen_hallway_normal
+
+- alias: "PushButton 3"
+  trigger:
+    platform: state
+    entity_id: sensor.hue_pushbutton_update
+  condition:
+    condition: state
+    entity_id: sensor.hue_pushbutton
+    state: '17'
+  action:
+    - service: scene.turn_on
+      entity_id: scene.kitchen_good_morning
+    - service: scene.turn_on
+      entity_id: scene.good_morning_cinema
