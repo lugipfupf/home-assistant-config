@@ -22,7 +22,10 @@ scene.kitchen_normal:
 scene.kitchen_comfy:
   icon: mdi:brightness-6
   friendly_name: Gemütlich
-scene.good_morning:
+scene.kitchen_good_morning:
+  icon: mdi:weather-night
+  friendly_name: Guten Morgen
+scene.good_morning_cinema:
   icon: mdi:weather-night
   friendly_name: Guten Morgen
 

@@ -1,36 +1,36 @@
-- alias: "Air quality mediocre"
-  trigger:
-    platform: template
-    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 750 }}'
-  action:
-    - service: script.pulselight_start
-      data:
-        brightness: '200'
-        color: yellow
-        delay: '05'
-        light_id: light.papierlampe_unten
-        transition: '5'
-- alias: "Air quality poor"
-  trigger:
-    platform: template
-    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1000 }}'
-  action:
-    - service: script.pulselight_start
-      data:
-        brightness: '200'
-        color: orange
-        delay: '05'
-        light_id: light.papierlampe_unten
-        transition: '5'
-- alias: "Air quality terrible"
-  trigger:
-    platform: template
-    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1400 }}'
-  action:
-    - service: script.pulselight_start
-      data:
-        brightness: '200'
-        color: red
-        delay: '05'
-        light_id: light.papierlampe_unten
-        transition: '5'
+#- alias: "Air quality mediocre"
+#  trigger:
+#    platform: template
+#    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 770 }}'
+#  action:
+#    - service: script.pulselight_start
+#      data:
+#        brightness: '200'
+#        color: yellow
+#        delay: '05'
+#        light_id: light.papierlampe_unten
+#        transition: '5'
+#- alias: "Air quality poor"
+#  trigger:
+#    platform: template
+#    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1000 }}'
+#  action:
+#    - service: script.pulselight_start
+#      data:
+#        brightness: '200'
+#        color: orange
+#        delay: '05'
+#        light_id: light.papierlampe_unten
+#        transition: '5'
+#- alias: "Air quality terrible"
+#  trigger:
+#    platform: template
+#    value_template: '{{ states.sensor.netatmo_chino_co2.state|int > 1400 }}'
+#  action:
+#    - service: script.pulselight_start
+#      data:
+#        brightness: '200'
+#        color: red
+#        delay: '05'
+#        light_id: light.papierlampe_unten
+#        transition: '5'

@@ -21,7 +21,7 @@ config:
   # base_url: example.duckdns.org:8123
 
 logger:
-  default: warn
+  default: info
   logs:
     homeassistant.components.sensor: fatal
 
@@ -30,7 +30,6 @@ updater:
 
 discovery:
   ignore: 
-    - google_cast
     - netgear_router
 
 light:
@@ -51,12 +50,11 @@ sun:
 #python_script:
 
 device_tracker:
-  - platform: nmap_tracker
-    home_interval: 10
+  - platform: ping
+    home_interval: 5
     hosts:
-      - !secret track_nine
-      - !secret track_lugi
-
+      handy_1: !secret track_lugi
+      handy_2: !secret track_nine
     
 media_player:
   - platform: kodi
@@ -98,6 +96,12 @@ media_player:
       HDMI5: "Spare"
       PHONO: "Vinyl"
 
+cast:
+  media_player:
+    - host: !secret chrome_chino
+    - host: !secret chrome_chuchi
+    - host: !secret chrome_cheminee
+
 netatmo:
   api_key: !secret netatmo_api-key
   secret_key: !secret netatmo_secret-key
@@ -113,4 +117,5 @@ input_boolean: !include input-booleans.yaml
 input_text: !include input-texts.yaml
 input_number: !include input-numbers.yaml
 script: !include scripts.yaml
+timer: !include timers.yaml
 automation: !include_dir_merge_list automation
