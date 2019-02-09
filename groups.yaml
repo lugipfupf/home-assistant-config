@@ -4,7 +4,7 @@ default_view:
   icon: mdi:home-assistant
   entities:
   - group.media_center
-  - group.chromecast
+#  - group.chromecast
   - device_tracker.handy_lugi
   - device_tracker.handy_nine
 
