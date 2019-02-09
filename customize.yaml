@@ -73,17 +73,27 @@ sensor.aare_hohe:
   friendly_name: Höhe
 
 sensor.netatmo_chino_temperature:
-  friendly_name: Chino
+  friendly_name: Temperatur
 sensor.netatmo_chino_co2:
   friendly_name: CO2
+sensor.netatmo_chino_humidity:
+  friendly_name: Luftfeuchtigkeit
 sensor.netatmo_cheminee_temperature:
-  friendly_name: Cheminee
+  friendly_name: Temperatur
 sensor.netatmo_cheminee_co2:
   friendly_name: CO2
+sensor.netatmo_cheminee_humidity:
+  friendly_name: Luftfeuchtigkeit
 sensor.netatmo_schlafzimmer_temperature:
-  friendly_name: Schlafzimmer
+  friendly_name: Temperatur
 sensor.netatmo_schlafzimmer_co2:
   friendly_name: CO2
+sensor.netatmo_schlafzimmer_humidity:
+  friendly_name: Luftfeuchtigkeit
+sensor.netatmo_sitzplatz_temperature:
+  friendly_name: Temperatur
+sensor.netatmo_sitzplatz_humidity:
+  friendly_name: Luftfeuchtigkeit
 
   script.pulselight_loop:
     hidden: true

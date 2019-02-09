@@ -96,11 +96,11 @@ media_player:
       HDMI5: "Spare"
       PHONO: "Vinyl"
 
-cast:
-  media_player:
-    - host: !secret chrome_chino
-    - host: !secret chrome_chuchi
-    - host: !secret chrome_cheminee
+#cast:
+#  media_player:
+#    - host: !secret chrome_chino
+#    - host: !secret chrome_chuchi
+#    - host: !secret chrome_cheminee
 
 netatmo:
   api_key: !secret netatmo_api-key

@@ -5,14 +5,18 @@ default_view:
   entities:
   - group.media_center
   - group.chromecast
-  - sensor.netatmo_chino_temperature
-  - sensor.netatmo_chino_co2
-  - sensor.netatmo_cheminee_temperature
-  - sensor.netatmo_cheminee_co2
-  - sensor.netatmo_schlafzimmer_temperature
-  - sensor.netatmo_schlafzimmer_co2
   - device_tracker.handy_lugi
   - device_tracker.handy_nine
+
+climate:
+  name: Raumklima
+  view: yes
+  icon: mdi:weather-windy
+  entities:
+    - group.climate_outdoor
+    - group.climate_chino
+    - group.climate_cheminee
+    - group.climate_schlafzimmer
 
 lights:
   name: Licht
@@ -45,6 +49,37 @@ media_download:
   entities:
   - group.sonarr
   - group.nzbget
+
+climate_chino:
+  name: Kino
+  control: hidden
+  entities:
+    - sensor.netatmo_chino_temperature
+    - sensor.netatmo_chino_co2
+    - sensor.netatmo_chino_humidity
+
+climate_cheminee:
+  name: Cheminee
+  control: hidden
+  entities:
+    - sensor.netatmo_cheminee_temperature
+    - sensor.netatmo_cheminee_co2
+    - sensor.netatmo_cheminee_humidity
+
+climate_schlafzimmer:
+  name: Schlafzimmer
+  control: hidden
+  entities:
+    - sensor.netatmo_schlafzimmer_temperature
+    - sensor.netatmo_schlafzimmer_co2
+    - sensor.netatmo_schlafzimmer_humidity
+
+climate_outdoor:
+  name: Sitzplatz
+  control: hidden
+  entities:
+    - sensor.netatmo_sitzplatz_temperature
+    - sensor.netatmo_sitzplatz_humidity
 
 sonarr:
   name: Serien
