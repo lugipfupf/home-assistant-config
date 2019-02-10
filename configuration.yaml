@@ -6,19 +6,22 @@ homeassistant:
   elevation: !secret elevation
   unit_system: metric
   time_zone: !secret time_zone
+  packages: !include_dir_named packages
   customize: !include customize.yaml
 
 #introduction:
+
+system_health:
 
 frontend:
 
 config:
 
-#http:
+http:
   # Uncomment this to add a password (recommended!)
   # api_password: PASSWORD
   # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
+  base_url: !secret base_url
 
 logger:
   default: info
