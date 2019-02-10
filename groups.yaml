@@ -110,19 +110,21 @@ media_center:
 chromecast:
   name: ChromeCast
   entities:
-    - media_player.chuchi
-    - media_player.cheminee
-    - media_player.chino
+      #- media_player.chuchi
+      #- media_player.cheminee
+      #- media_player.chino
 
 lights_rooms:
-  name: Licht
+  name: Räume
   entities:
   - group.lights_cinema
   - group.lights_bedroom
   - light.kuche
+  - light.atelier
+  - light.buro
 
 lights_scenes_cinema:
-  name: Licht Kino
+  name: Kino
   entities:
   - scene.reading
   - scene.relax
@@ -132,7 +134,7 @@ lights_scenes_cinema:
   - scene.good_morning_cinema
 
 lights_scenes_kitchen:
-  name: Licht Küche
+  name: Küche
   entities:
   - scene.kitchen_normal
   - scene.kitchen_comfy
@@ -165,6 +167,7 @@ lights_all:
   - light.leinwand
   - light.bar
   - light.kuche
+  - light.atelier
 
 lights_pushbutton_2:
   name: 'Button 2'

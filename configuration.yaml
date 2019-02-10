@@ -55,6 +55,8 @@ device_tracker:
     hosts:
       handy_1: !secret track_lugi
       handy_2: !secret track_nine
+
+cast:
     
 media_player:
   - platform: kodi
@@ -88,19 +90,13 @@ media_player:
       - AUDIO2
       - Bluetooth
       - USB
+      - PHONO
     source_names:
       HDMI1: "Cinebar"
       HDMI2: "Nintendo Switch"
-      HDMI3: "Playstation 3"
+      HDMI3: "Playstation 4"
       HDMI4: "Chrome Cast"
-      HDMI5: "Spare"
-      PHONO: "Vinyl"
-
-#cast:
-#  media_player:
-#    - host: !secret chrome_chino
-#    - host: !secret chrome_chuchi
-#    - host: !secret chrome_cheminee
+      HDMI5: "Steam Link"
 
 netatmo:
   api_key: !secret netatmo_api-key
