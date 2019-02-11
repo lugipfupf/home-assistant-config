@@ -5,6 +5,8 @@ default_view:
   entities:
   - group.media_center
 #  - group.chromecast
+  - media_player.spotify
+  - group.music_spotify
   - device_tracker.handy_lugi
   - device_tracker.handy_nine
 
@@ -49,6 +51,14 @@ media_download:
   entities:
   - group.sonarr
   - group.nzbget
+
+music_spotify:
+  name: Musig
+  entities:
+  - input_select.spotify_playlist
+  - input_select.spotify_source
+  - script.spotify_play
+  - input_number.spotify_volume
 
 climate_chino:
   name: Kino

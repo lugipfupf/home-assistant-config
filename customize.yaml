@@ -95,19 +95,6 @@ sensor.netatmo_sitzplatz_temperature:
 sensor.netatmo_sitzplatz_humidity:
   friendly_name: Luftfeuchtigkeit
 
-  script.pulselight_loop:
-    hidden: true
-  script.pulselight_action:
-    hidden: true
-  script.pulselight_start:
-    hidden: true
-  input_text.pulselight_color:
-    hidden: true
-  input_text.pulselight_light_id:
-    hidden: true
-  input_number.pulselight_transition:
-    hidden: true
-  input_number.pulselight_delay:
-    hidden: true
-  input_number.pulselight_brightness:
-    hidden: true
+script.spotify_play:
+  friendly_name: Los, Musig!
+  icon: mdi:play

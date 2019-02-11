@@ -1,0 +1,88 @@
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
+    aliases:
+      4ada956f8cfc1268cddf3b6a9848e0a6: Chuchi
+      e92cade6f454e577014d5246f118f22f: Cheminee
+      54d7abb52d89d0759df53e8eba8fa8aa: Chino                            
+      3ec15be5-6ffd-4168-8980-2d35b2e18372: Ganzi Wohnig
+      803abcd8653b3b278a2dd1437ed3d79b998463e6: Handy Lugi 
+
+input_number:
+  spotify_volume:
+    name: Lutsterchi
+    icon: mdi:volume_high
+    min: 0
+    max: 1
+    step: 0.05
+
+input_select:
+  spotify_playlist:
+    name: Lischte
+    options:
+      - StuffILike
+      - Metall
+      - Guugemusig
+      - Schnaugg
+      - Lugilugilugi
+      - Yasi
+      - Psychobilly
+      - Fun
+      - Latin
+      - 90s HipHop
+    icon: mdi:spotify
+  spotify_source:
+    name: Wo wosch
+    options:
+      - Chuchi
+      - Chino
+      - Cheminee
+      - Ganzi Wohnig
+    initial: Chuchi
+    icon: mdi:speaker-wireless
+
+script:
+  spotify_play:
+    alias: Weli Playlischte wosch
+    sequence:
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.spotify
+        volume_level: '0.40'
+    - service: media_player.select_source
+      data_template: 
+        entity_id: media_player.spotify
+        source: >
+          {% if is_state("input_select.spotify_source", "Chuchi") %} Chuchi
+          {% elif is_state("input_select.spotify_source", "Chino") %} Chino
+          {% elif is_state("input_select.spotify_source", "Cheminee") %} Cheminee
+          {% elif is_state("input_select.spotify_source", "Ganzi Wohnig") %} Ganzi Wohnii
+          {% endif %}
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.spotify
+        media_content_type: playlist
+        media_content_id: >
+         {% if is_state("input_select.spotify_playlist", "StuffILike") %} spotify:user:lugipfupf:playlist:5p6ly9IptVL1JqHmtUMRJN
+         {% elif is_state("input_select.spotify_playlist", "Metall") %} spotify:user:lugipfupf:playlist:6Ce8Dx3NhwTgv0gaYh9ABJ
+         {% elif is_state("input_select.spotify_playlist", "Guugemusig") %} spotify:user:lugipfupf:playlist:1KmXGmA9X8X6UOfagG6Wt4
+         {% elif is_state("input_select.spotify_playlist", "Schnaugg") %} spotify:user:lugipfupf:playlist:2ozwW05JAUkPQh5VLOtlGm
+         {% elif is_state("input_select.spotify_playlist", "Lugilugilugi") %} spotify:user:1199540777:playlist:4yg0WKttomMV3GM18P2E2g
+         {% elif is_state("input_select.spotify_playlist", "Yasi") %} spotify:user:lugipfupf:playlist:4bTnDBm6VxwEYH2EeGQEMp
+         {% elif is_state("input_select.spotify_playlist", "Psychobilly") %} spotify:user:lugipfupf:playlist:54YmbEX2Gdqbk9ECbfuxK6
+         {% elif is_state("input_select.spotify_playlist", "Fun") %} spotify:user:lugipfupf:playlist:22Lynocj4EqF5JzL1oRN4W
+         {% elif is_state("input_select.spotify_playlist", "Latin") %} spotify:user:lugipfupf:playlist:1oIPOG2QKMur4vFPJP5gw5
+         {% elif is_state("input_select.spotify_playlist", "90s HipHop") %} spotify:user:lugipfupf:playlist:2hp80kBOUlee8gMhUPlHSm
+         {% endif %}
+
+automation:
+  - alias: 'Spotify Lutsterchi'
+    trigger:
+      platform: state
+      entity_id: input_number.spotify_volume
+    action:
+      service: media_player.volume_set
+      data_template:
+        entity_id: media_player.spotify
+        volume_level: '{{  states.input_number.spotify_volume.state  }}'
