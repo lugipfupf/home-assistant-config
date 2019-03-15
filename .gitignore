@@ -17,3 +17,4 @@ known_devices.yaml
 .storage
 .migration_progress
 www/*.png
+.spotify-token-cache
