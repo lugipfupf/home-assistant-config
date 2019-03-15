@@ -5,7 +5,6 @@ default_view:
   entities:
   - group.media_center
 #  - group.chromecast
-  - media_player.spotify
   - group.music_spotify
   - device_tracker.handy_lugi
   - device_tracker.handy_nine
@@ -59,6 +58,7 @@ music_spotify:
   - input_select.spotify_source
   - script.spotify_play
   - input_number.spotify_volume
+  - media_player.spotify
 
 climate_chino:
   name: Kino
