@@ -281,33 +281,36 @@
     light.atelier:
       state: off
       transition: 1
+    light.buro:
+      state: off
+      transition: 1
 
 - name: 'All on'
   entities:
     light.papierlampe_oben:
       state: on
-      brightness: 144
-      xy_color: [0.5014,0.4153]
+      brightness: 254
+      xy_color: [0.4573,0.41]
       transition: 2
     light.papierlampe_mitte:
       state: on
-      brightness: 144
-      xy_color: [0.5014,0.4153]
+      brightness: 254
+      xy_color: [0.4573,0.41]
       transition: 2
     light.papierlampe_unten:
       state: on
-      brightness: 144
-      xy_color: [0.5014,0.4153]
+      brightness: 254
+      xy_color: [0.4573,0.41]
       transition: 2
     light.bar:
       state: on
-      xy_color: [0.183,0.3374]
-      brightness: 240
+      xy_color: [0.4573,0.41]
+      brightness: 254
       transition: 2
     light.leinwand:
       state: on
-      xy_color: [0.1992, 0.1622]
-      brightness: 240
+      xy_color: [0.4573,0.41]
+      brightness: 254
       transition: 2
     light.kuche:
       state: on
@@ -317,5 +320,36 @@
     light.atelier:
       state: on
       brightness: 240
-      xy_color: [0.5014,0.4153]
-      transiotion: 2
+      xy_color: [0.4573,0.41]
+      transition: 2
+
+- name: 'Nightlight'
+  entities:
+    light.papierlampe_oben:
+      state: on
+      brightness: 1
+      xy_color: [0.561,0.404]
+      transition: 1
+    light.papierlampe_mitte:
+      state: off
+      transition: 1
+    light.papierlampe_unten:
+      state: off
+      transition: 1
+    light.bar:
+      state: off
+      transition: 1
+    light.leinwand:
+      state: off
+      transition: 1
+    light.kuche:
+      state: on
+      brightness: 1
+      xy_color: [0.561,0.404]
+      transition: 1
+    light.atelier:
+      state: off
+      transition: 1
+    light.buro:
+      state: off
+      transition: 1

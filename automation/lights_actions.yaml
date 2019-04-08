@@ -56,7 +56,7 @@
     state: '16'
   action:
     - service: scene.turn_on
-      entity_id: scene.kitchen_hallway_normal
+      entity_id: scene.all_on
 
 - alias: "PushButton 3"
   trigger:
@@ -68,6 +68,4 @@
     state: '17'
   action:
     - service: scene.turn_on
-      entity_id: scene.kitchen_good_morning
-    - service: scene.turn_on
-      entity_id: scene.good_morning_cinema
+      entity_id: scene.nightlight
