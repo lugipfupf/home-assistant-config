@@ -12,7 +12,7 @@
     value_template: '{{ is_state("media_player.cinebar", "playing") and is_state("input_boolean.mediacontrol_movies", "on") }}'
   action:
     service: scene.turn_on
-    entity_id: scene.movie_playing
+    entity_id: scene.movie_play
 
 - alias: "Colorful gaming lights"
   trigger:

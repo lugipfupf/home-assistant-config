@@ -139,10 +139,11 @@ lights_scenes_cinema:
   - scene.reading
   - scene.relax
   - scene.movie_menu
-  - scene.movie_playing
+  - scene.movie_play
   - scene.colorful_gaming
   - scene.cinema_concentrate
   - scene.good_morning_cinema
+  - scene.clockwork_orange
 
 lights_scenes_kitchen:
   name: Küche
@@ -171,14 +172,28 @@ lights_paperlamp:
   - light.papierlampe_mitte
   - light.papierlampe_unten
 
+lights_buro_decke:
+  name: Büro Decke
+  entities:
+  - light.hue_ambiance_spot_1
+  - light.hue_ambiance_spot_2
+
+lights_buro:
+  name: Büro
+  entities:
+  - light.buro
+  - group.lights_buro_decke
+
 lights_all:
   name: Licht
   entities:
   - group.lights_paperlamp
   - light.leinwand
+  - light.hue_color_lamp_1_2
   - light.bar
   - light.kuche
   - light.atelier
+  - groups.lights_buro
 
 lights_pushbutton_2:
   name: 'Button 2'

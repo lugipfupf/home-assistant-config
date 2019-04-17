@@ -28,6 +28,9 @@ scene.kitchen_good_morning:
 scene.good_morning_cinema:
   icon: mdi:weather-night
   friendly_name: Guten Morgen
+scene.clockwork_orange:
+  icon: mdi:cogs
+  friendly_name: Clockwork Orange
 
 group.lights_bedroom:
   icon: mdi:lamp
