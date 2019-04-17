@@ -27,7 +27,6 @@ logger:
   default: info
   logs:
     homeassistant.components.sensor: fatal
-    homeassistant.components.automation: debug
 
 updater:
   reporting: no
