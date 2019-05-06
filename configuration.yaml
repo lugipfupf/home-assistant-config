@@ -54,7 +54,6 @@ sun:
 
 device_tracker:
   - platform: ping
-    home_interval: 5
     hosts:
       handy_1: !secret track_lugi
       handy_2: !secret track_nine

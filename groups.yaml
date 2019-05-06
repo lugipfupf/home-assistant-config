@@ -132,6 +132,7 @@ lights_rooms:
   - light.kuche
   - light.atelier
   - light.buro
+  - light.gang
 
 lights_scenes_cinema:
   name: Kino
@@ -193,6 +194,7 @@ lights_all:
   - light.bar
   - light.kuche
   - light.atelier
+  - light.gang
   - groups.lights_buro
 
 lights_pushbutton_2:

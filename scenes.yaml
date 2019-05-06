@@ -72,6 +72,12 @@
     light.hue_color_lamp_1_2:
       state: off
       transition: 2
+    light.gang:
+      state: on
+      transition: 2
+      brightness: 180
+      xy_color: [0.5014, 0.4153]
+
 
 - name: 'Movie play'
   entities:
@@ -96,6 +102,10 @@
     light.hue_color_lamp_1_2:
       state: off
       transition: 2
+    light.gang:
+      state: off
+      transition: 2
+
 
 - name: 'Colorful Gaming'
   entities:
@@ -230,7 +240,7 @@
     light.hue_color_lamp_1_2:
       state: off
       transition: 1
-
+ 
 - name: 'Kitchen Concentrate'
   entities:
     light.kuche:
@@ -334,6 +344,10 @@
     light.hue_color_lamp_1_2:
       state: off
       transition: 1
+    light.gang:
+      state: off
+      transition: 1
+      
 
 - name: 'All on'
   entities:
@@ -375,6 +389,11 @@
     light.hue_color_lamp_1_2:
       state: on
       brightness: 240
+      xy_color: [0.4573,0.41]
+      transition: 1
+    light.gang:
+      state: on
+      brightness: 254
       xy_color: [0.4573,0.41]
       transition: 1
 
