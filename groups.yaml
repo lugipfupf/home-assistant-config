@@ -6,8 +6,8 @@ default_view:
   - group.media_center
 #  - group.chromecast
   - group.music_spotify
-  - device_tracker.handy_lugi
-  - device_tracker.handy_nine
+  - device_tracker.handy_1
+  - device_tracker.handy_2
 
 climate:
   name: Raumklima
